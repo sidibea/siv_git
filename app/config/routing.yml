@@ -1,0 +1,24 @@
+siv_main:
+    resource: "@SIVMainBundle/Resources/config/routing.yml"
+    prefix:   /administration
+
+siv_user:
+    resource: "@SIVUsersBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    path:   /login
+    defaults:  { _controller: SIVUsersBundle:Security:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /message
